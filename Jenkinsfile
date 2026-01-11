@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = 'docker-hub-credential'
+        DOCKERHUB_CREDENTIALS = 'Dockerhub'
         DOCKERHUB_USER = 'sunnah658'
         APP_NAME = 'nodejs-app'
         APP_VERSION = '1.0'
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: "${Dockerhub}", usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                withCredentials([usernamePassword(credentialsId: "${DOCKERHUB_CREDENTIALS}", usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh """
                         echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
                         docker push $DOCKERHUB_USER/$APP_NAME:$APP_VERSION
