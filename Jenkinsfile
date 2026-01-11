@@ -14,12 +14,6 @@ pipeline {
     }
 
     stages {
-      //  stage('Checkout') {
-            steps {
-        //        git branch: 'main', url: 'https://github.com/sunnah658/k8s_project_with_helm_jenkins.git'
-         //   }
-       // }
-
         stage('Build Docker Image') {
             steps {
                 script {
