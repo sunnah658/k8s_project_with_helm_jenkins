@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'docker-hub-credential'
-        DOCKERHUB_USER = 'devopssteps'
+        DOCKERHUB_USER = 'sunnah658'
         APP_NAME = 'nodejs-app'
         APP_VERSION = '1.0'
         //APP_VERSION = "build-${env.BUILD_NUMBER}"
