@@ -13,7 +13,7 @@ pipeline {
         //MINIKUBE_HOME = "/var/lib/jenkins/kube-minikube/.minikube"
     }
 
-    /stages {
+    stages {
       //  stage('Checkout') {
             steps {
         //        git branch: 'main', url: 'https://github.com/sunnah658/k8s_project_with_helm_jenkins.git'
